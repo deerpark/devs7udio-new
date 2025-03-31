@@ -1,103 +1,196 @@
-import Image from "next/image";
+import { ComponentWrapper } from '@/components/component-wrapper';
+import { ChartDemo } from '@/components/demo/chart-demo';
+import { AccordionDemo } from '@/components/demo/accordion-demo';
+import { AlertDemo } from '@/components/demo/alert-demo';
+import { AlertDialogDemo } from '@/components/demo/alert-dialog-demo';
+import { AspectRatioDemo } from '@/components/demo/aspect-ratio-demo';
+import { AvatarDemo } from '@/components/demo/avatar-demo';
+import { BadgeDemo } from '@/components/demo/badge-demo';
+import { BreadcrumbDemo } from '@/components/demo/breadcrumb-demo';
+import { ButtonDemo } from '@/components/demo/button-demo';
+import { CalendarDemo } from '@/components/demo/calendar-demo';
+import { CardDemo } from '@/components/demo/card-demo';
+import { CarouselDemo } from '@/components/demo/carousel-demo';
+import { CheckboxDemo } from '@/components/demo/checkbox-demo';
+import { CollapsibleDemo } from '@/components/demo/collapsible-demo';
+import { ComboboxDemo } from '@/components/demo/combobox-demo';
+import { CommandDemo } from '@/components/demo/command-demo';
+import { ContextMenuDemo } from '@/components/demo/context-menu-demo';
+import { DatePickerDemo } from '@/components/demo/date-picker-demo';
+import { DialogDemo } from '@/components/demo/dialog-demo';
+import { DrawerDemo } from '@/components/demo/drawer-demo';
+import { DropdownMenuDemo } from '@/components/demo/dropdown-menu-demo';
+import { FormDemo } from '@/components/demo/form-demo';
+import { HoverCardDemo } from '@/components/demo/hover-card-demo';
+import { InputDemo } from '@/components/demo/input-demo';
+import { InputOTPDemo } from '@/components/demo/input-otp-demo';
+import { LabelDemo } from '@/components/demo/label-demo';
+import { MenubarDemo } from '@/components/demo/menubar-demo';
+import { NavigationMenuDemo } from '@/components/demo/navigation-menu-demo';
+import { PaginationDemo } from '@/components/demo/pagination-demo';
+import { PopoverDemo } from '@/components/demo/popover-demo';
+import { ProgressDemo } from '@/components/demo/progress-demo';
+import { RadioGroupDemo } from '@/components/demo/radio-group-demo';
+import { ResizableDemo } from '@/components/demo/resizable-demo';
+import { ScrollAreaDemo } from '@/components/demo/scroll-area-demo';
+import { SelectDemo } from '@/components/demo/select-demo';
+import { SeparatorDemo } from '@/components/demo/separator-demo';
+import { SheetDemo } from '@/components/demo/sheet-demo';
+import { SkeletonDemo } from '@/components/demo/skeleton-demo';
+import { SliderDemo } from '@/components/demo/slider-demo';
+import { SonnerDemo } from '@/components/demo/sonner-demo';
+import { SwitchDemo } from '@/components/demo/switch-demo';
+import { TableDemo } from '@/components/demo/table-demo';
+import { TabsDemo } from '@/components/demo/tabs-demo';
+import { TextareaDemo } from '@/components/demo/textarea-demo';
+import { ToggleDemo } from '@/components/demo/toggle-demo';
+import { ToggleGroupDemo } from '@/components/demo/toggle-group-demo';
+import { TooltipDemo } from '@/components/demo/tooltip-demo';
 
 export default function Home() {
   return (
-    <div className="grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20 font-[family-name:var(--font-geist-sans)]">
-      <main className="flex flex-col gap-[32px] row-start-2 items-center sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={180}
-          height={38}
-          priority
-        />
-        <ol className="list-inside list-decimal text-sm/6 text-center sm:text-left font-[family-name:var(--font-geist-mono)]">
-          <li className="mb-2 tracking-[-.01em]">
-            Get started by editing{" "}
-            <code className="bg-black/[.05] dark:bg-white/[.06] px-1 py-0.5 rounded font-[family-name:var(--font-geist-mono)] font-semibold">
-              src/app/page.tsx
-            </code>
-            .
-          </li>
-          <li className="tracking-[-.01em]">
-            Save and see your changes instantly.
-          </li>
-        </ol>
-
-        <div className="flex gap-4 items-center flex-col sm:flex-row">
-          <a
-            className="rounded-full border border-solid border-transparent transition-colors flex items-center justify-center bg-foreground text-background gap-2 hover:bg-[#383838] dark:hover:bg-[#ccc] font-medium text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 sm:w-auto"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={20}
-              height={20}
-            />
-            Deploy now
-          </a>
-          <a
-            className="rounded-full border border-solid border-black/[.08] dark:border-white/[.145] transition-colors flex items-center justify-center hover:bg-[#f2f2f2] dark:hover:bg-[#1a1a1a] hover:border-transparent font-medium text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 w-full sm:w-auto md:w-[158px]"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Read our docs
-          </a>
-        </div>
-      </main>
-      <footer className="row-start-3 flex gap-[24px] flex-wrap items-center justify-center">
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/file.svg"
-            alt="File icon"
-            width={16}
-            height={16}
-          />
-          Learn
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/window.svg"
-            alt="Window icon"
-            width={16}
-            height={16}
-          />
-          Examples
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/globe.svg"
-            alt="Globe icon"
-            width={16}
-            height={16}
-          />
-          Go to nextjs.org →
-        </a>
-      </footer>
+    <div className="@container grid flex-1 gap-4 p-4">
+      <ComponentWrapper name="chart" className="w-full">
+        <ChartDemo />
+      </ComponentWrapper>
+      <ComponentWrapper name="accordion">
+        <AccordionDemo />
+      </ComponentWrapper>
+      <ComponentWrapper name="alert">
+        <AlertDemo />
+      </ComponentWrapper>
+      <ComponentWrapper name="alert-dialog">
+        <AlertDialogDemo />
+      </ComponentWrapper>
+      <ComponentWrapper name="aspect-ratio">
+        <AspectRatioDemo />
+      </ComponentWrapper>
+      <ComponentWrapper name="avatar">
+        <AvatarDemo />
+      </ComponentWrapper>
+      <ComponentWrapper name="badge">
+        <BadgeDemo />
+      </ComponentWrapper>
+      <ComponentWrapper name="breadcrumb">
+        <BreadcrumbDemo />
+      </ComponentWrapper>
+      <ComponentWrapper name="button">
+        <ButtonDemo />
+      </ComponentWrapper>
+      <ComponentWrapper name="calendar">
+        <CalendarDemo />
+      </ComponentWrapper>
+      <ComponentWrapper name="card">
+        <CardDemo />
+      </ComponentWrapper>
+      <ComponentWrapper name="carousel">
+        <CarouselDemo />
+      </ComponentWrapper>
+      <ComponentWrapper name="checkbox">
+        <CheckboxDemo />
+      </ComponentWrapper>
+      <ComponentWrapper name="collapsible">
+        <CollapsibleDemo />
+      </ComponentWrapper>
+      <ComponentWrapper name="combobox">
+        <ComboboxDemo />
+      </ComponentWrapper>
+      <ComponentWrapper name="command">
+        <CommandDemo />
+      </ComponentWrapper>
+      <ComponentWrapper name="context-menu">
+        <ContextMenuDemo />
+      </ComponentWrapper>
+      <ComponentWrapper name="date-picker">
+        <DatePickerDemo />
+      </ComponentWrapper>
+      <ComponentWrapper name="dialog">
+        <DialogDemo />
+      </ComponentWrapper>
+      <ComponentWrapper name="drawer">
+        <DrawerDemo />
+      </ComponentWrapper>
+      <ComponentWrapper name="dropdown-menu">
+        <DropdownMenuDemo />
+      </ComponentWrapper>
+      <ComponentWrapper name="form">
+        <FormDemo />
+      </ComponentWrapper>
+      <ComponentWrapper name="hover-card">
+        <HoverCardDemo />
+      </ComponentWrapper>
+      <ComponentWrapper name="input">
+        <InputDemo />
+      </ComponentWrapper>
+      <ComponentWrapper name="input-otp">
+        <InputOTPDemo />
+      </ComponentWrapper>
+      <ComponentWrapper name="label">
+        <LabelDemo />
+      </ComponentWrapper>
+      <ComponentWrapper name="menubar">
+        <MenubarDemo />
+      </ComponentWrapper>
+      <ComponentWrapper name="navigation-menu">
+        <NavigationMenuDemo />
+      </ComponentWrapper>
+      <ComponentWrapper name="pagination">
+        <PaginationDemo />
+      </ComponentWrapper>
+      <ComponentWrapper name="popover">
+        <PopoverDemo />
+      </ComponentWrapper>
+      <ComponentWrapper name="progress">
+        <ProgressDemo />
+      </ComponentWrapper>
+      <ComponentWrapper name="radio-group">
+        <RadioGroupDemo />
+      </ComponentWrapper>
+      <ComponentWrapper name="resizable">
+        <ResizableDemo />
+      </ComponentWrapper>
+      <ComponentWrapper name="scroll-area">
+        <ScrollAreaDemo />
+      </ComponentWrapper>
+      <ComponentWrapper name="select">
+        <SelectDemo />
+      </ComponentWrapper>
+      <ComponentWrapper name="separator">
+        <SeparatorDemo />
+      </ComponentWrapper>
+      <ComponentWrapper name="sheet">
+        <SheetDemo />
+      </ComponentWrapper>
+      <ComponentWrapper name="skeleton">
+        <SkeletonDemo />
+      </ComponentWrapper>
+      <ComponentWrapper name="slider">
+        <SliderDemo />
+      </ComponentWrapper>
+      <ComponentWrapper name="sonner">
+        <SonnerDemo />
+      </ComponentWrapper>
+      <ComponentWrapper name="switch">
+        <SwitchDemo />
+      </ComponentWrapper>
+      <ComponentWrapper name="table">
+        <TableDemo />
+      </ComponentWrapper>
+      <ComponentWrapper name="tabs">
+        <TabsDemo />
+      </ComponentWrapper>
+      <ComponentWrapper name="textarea">
+        <TextareaDemo />
+      </ComponentWrapper>
+      <ComponentWrapper name="toggle">
+        <ToggleDemo />
+      </ComponentWrapper>
+      <ComponentWrapper name="toggle-group">
+        <ToggleGroupDemo />
+      </ComponentWrapper>
+      <ComponentWrapper name="tooltip">
+        <TooltipDemo />
+      </ComponentWrapper>
     </div>
   );
 }

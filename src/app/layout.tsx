@@ -34,9 +34,11 @@ export default function RootLayout({
           enableSystem
           disableTransitionOnChange
         >
-          <ModeToggle />
-          {children}
-          <Toaster />
+          <div vaul-drawer-wrapper="true">
+            <ModeToggle />
+            {children}
+            <Toaster />
+          </div>
         </ThemeProvider>
       </body>
     </html>
